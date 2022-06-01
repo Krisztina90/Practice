@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyakorlás</title>
+</head>
+
+<body>
+    <h1>Ez egy gyakorló oldal!</h1>
+    <p>
+        A p-vel bekezdéseket tudok írni! Ebben a <em>bekezdésben</em> folyamatos szöveg jelenik meg, amiből az em, és a
+        strong elemmel tudok <strong>kiemelni.</strong>
+    </p>
+    <p>Beszúrhatok hivatkozásokat is, ami akár egy másik lapra, vagy oldalra visz át. Az a (Anchor) taggel tudok
+        beilleszteni hivatkozást, a tag után target="_blank" ezzel az attribútommal azt érem el, hogy új lapon nyitja
+        meg a böngésző a hivatkozást.</p>
+    Kérdés: href?
+    <a target="_blank" href="https://cristo.hu">Lépjen a cristo.hu oldalra</a>
+    <a href="About.html">Rólunk</a>
+
+
+    <p>
+        <strong>Készíthetek listákat is:</strong>
+    <h2>Ez egy <em>nem</em> rendezett lista</h2>
+    <ul>Akváriumi halak
+        <li>Guppi</li>
+        <li>Neon</li>
+        <li>Algaevő</li>
+    </ul>
+
+    <h2>Ez egy <em>rendezett</em> lista</h2>
+    <ol>Webfejlesztési alapok
+        <li>Repository létrehozása</li>
+        <li>Clone-zás a megfelelő mappába</li>
+        <li>Visual Studio Code Html fájl létrehozása</li>
+    </ol>
+    </p>
+    <h2>Képek beszúrása</h2>
+    <p>img taggel tudok beszúrni képet, az src attribútum adja meg a forrást, a width attribútum a kép méretét, az alt
+        pedig egy alternatív szöveget. Kép elérési helye elé /jel.
+    </p>
+    <p><img src="/image.jpeg" width="100" alt="ösztönzés"></p>
+
+    <p>
+    <h2>Táblázat készítése</h2>
+    <table>
+        <thead>
+
+            <tr>
+                <th>Étkezés típusa</th>
+                <th>Hétfő</th>
+                <th>Kedd</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ebéd</td>
+                <td colspan="2" style="text-align: center">igen</td>
+                
+            </tr>
+            <tr>
+                <td>Vacsora</td>
+                <td>nem</td>
+                <td>igen</td>
+            </tr>
+        </tbody>
+    </table>
+    </p>
+    <div>
+        A táblázat készítése, table tag-gel. A táblázatnak van egy fejléce = thead, ebbe rakunk th taggel a fejléc sort. A táblázat belső része =tbody, melyben tr, és td tageket használok. A td tagen belül adom meg attribútumként pl, ha egyesítem a cellákat rowspan, vagy oszlopokat collspan, de ilyen att. style="text-align: center is. 
+    </div>
+<div>
+    CSS fájl létrehozása
+    Pl. style.css fájl létrehozása, majd a html fájlba a link:css segítségével beírom. A tulajdonságokat, hogy mire vonatkozik úgy tudom megkülönböztetni, hogy vagy classokat hozok létre, id-k vagy külön tagekra.
+</div>
+
+</body>
+
+</html>
