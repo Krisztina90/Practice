@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 
 <body>
     <h1>Ez egy gyakorló oldal!</h1>
-    <p>
+    <p class="font-bigger">
         A p-vel bekezdéseket tudok írni! Ebben a <em>bekezdésben</em> folyamatos szöveg jelenik meg, amiből az em, és a
         strong elemmel tudok <strong>kiemelni.</strong>
     </p>
@@ -27,23 +27,24 @@
         <strong>Készíthetek listákat is:</strong>
     <h2>Ez egy <em>nem</em> rendezett lista</h2>
     <ul>Akváriumi halak
-        <li>Guppi</li>
+        <li id="guppi">Guppi</li>
         <li>Neon</li>
         <li>Algaevő</li>
     </ul>
-
-    <h2>Ez egy <em>rendezett</em> lista</h2>
-    <ol>Webfejlesztési alapok
-        <li>Repository létrehozása</li>
-        <li>Clone-zás a megfelelő mappába</li>
-        <li>Visual Studio Code Html fájl létrehozása</li>
+    <div class="rendezett-lista">
+        <h2>Ez egy <em>rendezett</em> lista</h2>
+        <ol>Webfejlesztési alapok
+            <li>Repository létrehozása</li>
+            <li>Clone-zás a megfelelő mappába</li>
+            <li>Visual Studio Code Html fájl létrehozása</li>
+    </div>
     </ol>
     </p>
     <h2>Képek beszúrása</h2>
     <p>img taggel tudok beszúrni képet, az src attribútum adja meg a forrást, a width attribútum a kép méretét, az alt
         pedig egy alternatív szöveget. Kép elérési helye elé /jel.
     </p>
-    <p><img src="/image.jpeg" width="100" alt="ösztönzés"></p>
+    <p><img id="img1" src="/image.jpeg" width="100" alt="ösztönzés"></p>
 
     <p>
     <h2>Táblázat készítése</h2>
@@ -60,7 +61,7 @@
             <tr>
                 <td>Ebéd</td>
                 <td colspan="2" style="text-align: center">igen</td>
-                
+
             </tr>
             <tr>
                 <td>Vacsora</td>
@@ -71,12 +72,47 @@
     </table>
     </p>
     <div>
-        A táblázat készítése, table tag-gel. A táblázatnak van egy fejléce = thead, ebbe rakunk th taggel a fejléc sort. A táblázat belső része =tbody, melyben tr, és td tageket használok. A td tagen belül adom meg attribútumként pl, ha egyesítem a cellákat rowspan, vagy oszlopokat collspan, de ilyen att. style="text-align: center is. 
+        A táblázat készítése, table tag-gel. A táblázatnak van egy fejléce = thead, ebbe rakunk th taggel a fejléc sort.
+        A táblázat belső része =tbody, melyben tr, és td tageket használok. A td tagen belül adom meg attribútumként pl,
+        ha egyesítem a cellákat rowspan, vagy oszlopokat collspan, de ilyen att. style="text-align: center is.
     </div>
-<div>
-    CSS fájl létrehozása
-    Pl. style.css fájl létrehozása, majd a html fájlba a link:css segítségével beírom. A tulajdonságokat, hogy mire vonatkozik úgy tudom megkülönböztetni, hogy vagy classokat hozok létre, id-k vagy külön tagekra.
-</div>
+
+    <div class="large-margin-bottom">
+        CSS fájl létrehozása
+        Pl. style.css fájl létrehozása, majd a html fájlba a link:css segítségével beírom. A tulajdonságokat, hogy mire
+        vonatkozik úgy tudom megkülönböztetni, hogy vagy classokat hozok létre, id-k vagy külön tagekra.
+        Formázom a body-t, majd létrehozhatok classt is (.-al kezdem), id létrehozása #-el kezdem.
+    </div>
+    <p></p>
+    <div>
+        <h2>Űrlap létrehozása</h2>
+        <p> Űrlapot a form taggel tudok létrehozni. Két fontos eleme van, a label és az input.
+            Az inputban adjuk meg a típust,a label pedig az űrlap előtti szöveg. br taggel tudok sort beszúrni.
+            Inputnak adjunk id-t, és akkor a label for-ban hivatkozok rá, így ha a szövegre kattint akkor is bepipálja.
+        Fieldset-be (csoportba) foglalhatom az adatokat. Legendbe írom az összefoglaló nevét. Szegélyt is tesz rá alapból.
+        </p>
+        <form class="bejelentkezes">
+            <fieldset>
+                <legend>Alapadatok</legend>
+                <label>Név:</label>
+                <input type="text">
+                <label>Email azonosító:</label>
+                <input type="email">
+            </fieldset>
+
+            <br>
+            <br>
+            <label for="newsletter">Hírlevél</label>
+            <input id="newsletter" type="checkbox">
+            <br>
+            <label>Hírlevél gyakorisága</label>
+            <br>
+            <input id="newsletter-monthly" type="radio" name="newsletterfrequance" value="monthly"> <label
+                for="newsletter-monthly">havi</label>
+            <input id="newsletter-weekly" type="radio" name="newsletterfrequance" value="weekly"><label>heti</label>
+
+        </form>
+    </div>
 
 </body>
 
